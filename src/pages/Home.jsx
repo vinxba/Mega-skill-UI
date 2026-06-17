@@ -6,7 +6,7 @@ import Statistics from '../components/Statistics';
 import Services from '../components/Services';
 import WorkProcess from '../components/WorkProcess';
 import Testimonials from '../components/Testimonials';
-import Footer from '../components/Footer';
+import Footer from '../components/footer';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
