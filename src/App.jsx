@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from "./components/Services";
 import Statistics from "./components/Statistics";
+import WorkProcess from "./components/WorkProcess";
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
@@ -12,6 +13,7 @@ export default function App() {
       <Hero />
        <Statistics />
       <Services />
+      <WorkProcess />
       <Footer />
     </div>
   );
