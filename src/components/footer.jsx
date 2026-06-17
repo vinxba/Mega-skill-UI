@@ -52,7 +52,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-4">
           <span className="text-white font-extrabold text-xl tracking-tight">Megaskill</span>
-          <span className="text-xs text-gray-600 hidden sm:block">© 2024 Megaskill Technical Services, Inc. All rights reserved.</span>
+          <span className="text-xs text-gray-600 hidden sm:block">© 2026 Megaskill Technical Services, Inc. All rights reserved.</span>
         </div>
 
         <div className="flex items-center gap-4 text-xs text-gray-600">
