@@ -50,9 +50,12 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="mt-8 flex flex-wrap gap-4"
           >
-            <button className="bg-amber-500 hover:bg-amber-600 transition-colors px-8 py-4 text-slate-950 font-bold uppercase tracking-wide shadow-lg">
+            <a
+              href="/#services"
+              className="bg-amber-500 hover:bg-amber-600 transition-colors px-8 py-4 text-slate-950 font-bold uppercase tracking-wide shadow-lg inline-flex items-center justify-center"
+            >
               OUR SERVICES
-            </button>
+            </a>
 
             <Link
               to="/contact"

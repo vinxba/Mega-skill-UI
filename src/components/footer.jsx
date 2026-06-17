@@ -1,21 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const columns = [
   {
-    heading: "Get to Know Us",
-    links: ["About Us", "Careers", "Press & Media", "Sustainability", "Blog"],
+    heading: "Company",
+    links: [
+      { name: "About Us", path: "/about" },
+      { name: "Careers", path: "#" }, // Placeholder, adjust if you create a careers page
+      { name: "Contact Us", path: "/contact" },
+      { name: "Blog", path: "#" }, // Placeholder, adjust if you create a blog page
+    ],
   },
   {
-    heading: "Shop With Us",
-    links: ["All Appliances", "Today's Deals", "New Arrivals", "Best Sellers", "Certified Grades"],
-  },
-  {
-    heading: "Customer Service",
-    links: ["Your Account", "Track Your Order", "Returns & Exchanges", "FAQ", "Contact Us"],
-  },
-  {
-    heading: "Policies",
-    links: ["Warranty Policy", "Privacy Policy", "Terms of Service", "Cookie Policy", "Affiliate Program"],
+    heading: "Our Services",
+    links: [ // These links would typically point to sections on a services page or individual service pages
+      { name: "HVAC Systems", path: "/services#hvac" },
+      { name: "Plumbing Services", path: "/services#plumbing" },
+      { name: "Electrical Services", path: "/services#electrical" },
+      { name: "Painting Works", path: "/services#painting" },
+      { name: "Carpentry", path: "/services#carpentry" },
+    ],
   },
 ];
 
@@ -31,14 +35,19 @@ export default function Footer() {
       </button>
 
       {/* Main columns */}
-      <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-32">
         {columns.map(col => (
           <div key={col.heading}>
             <h4 className="text-white font-bold text-sm mb-5">{col.heading}</h4>
             <ul className="space-y-3">
-              {col.links.map(link => (
-                <li key={link}>
-                  <a href="#" className="text-sm hover:text-white transition-colors">{link}</a>
+              {col.links.map(linkItem => (
+                <li key={linkItem.name}>
+                  {/* Use Link for internal navigation, a for external or placeholders */}
+                  {linkItem.path.startsWith('/') || linkItem.path.startsWith('#') ? (
+                    <Link to={linkItem.path} className="text-sm hover:text-white transition-colors">{linkItem.name}</Link>
+                  ) : (
+                    <a href={linkItem.path} className="text-sm hover:text-white transition-colors">{linkItem.name}</a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -56,11 +65,11 @@ export default function Footer() {
         </div>
 
         <div className="flex items-center gap-4 text-xs text-gray-600">
-          <a href="#" className="hover:text-gray-300 transition-colors">Privacy</a>
+          <Link to="/privacy" className="hover:text-gray-300 transition-colors">Privacy</Link>
           <span className="text-gray-800">·</span>
-          <a href="#" className="hover:text-gray-300 transition-colors">Terms</a>
+          <Link to="/terms" className="hover:text-gray-300 transition-colors">Terms</Link>
           <span className="text-gray-800">·</span>
-          <a href="#" className="hover:text-gray-300 transition-colors">Cookies</a>
+          <Link to="/cookies" className="hover:text-gray-300 transition-colors">Cookies</Link>
         </div>
 
         <div className="flex items-center gap-3">
