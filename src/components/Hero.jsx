@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Hero() {
   return (
     <section
@@ -31,12 +33,12 @@ export default function Hero() {
               OUR SERVICES
             </button>
 
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="border border-white px-8 py-4 text-white inline-flex items-center justify-center"
             >
               CONTACT US
-            </a>
+            </Link>
           </div>
         </div>
       </div>

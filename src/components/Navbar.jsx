@@ -34,12 +34,14 @@ export default function Navbar() {
             >
               Home
             </Link>
-            <a 
-              href="/#about" 
-              className="text-sm font-semibold tracking-wide text-slate-300 hover:text-white transition-colors duration-200"
+            <Link 
+              to="/about" 
+              className={`text-sm font-semibold tracking-wide transition-colors duration-200 ${
+                isActive("/about") ? "text-amber-500" : "text-slate-300 hover:text-white"
+              }`}
             >
               About
-            </a>
+            </Link>
             <a 
               href="/#services" 
               className="text-sm font-semibold tracking-wide text-slate-300 hover:text-white transition-colors duration-200"
@@ -70,13 +72,26 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu Dropdown */}
+      {/* Mobile Sidebar Overlay */}
+      {isOpen && (
+        <div 
+          className="lg:hidden fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-40"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
+
+      {/* Mobile Sidebar Menu */}
       <div 
-        className={`lg:hidden absolute top-20 left-0 w-full bg-slate-900 border-b border-slate-800 px-6 py-6 transition-all duration-300 ease-in-out transform ${
-          isOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-4 invisible pointer-events-none"
+        className={`lg:hidden fixed top-0 left-0 h-full w-72 bg-slate-900 border-r border-slate-800 px-6 py-8 z-50 transition-transform duration-300 ease-in-out transform ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-6">
+          <div className="mb-4">
+            <h1 className="text-white text-xl font-black tracking-tight leading-none">
+              MEGA<span className="text-amber-500">SKILL</span>
+            </h1>
+          </div>
           <Link 
             to="/" 
             onClick={() => setIsOpen(false)}
@@ -86,13 +101,15 @@ export default function Navbar() {
           >
             Home
           </Link>
-          <a 
-            href="/#about" 
+          <Link 
+            to="/about" 
             onClick={() => setIsOpen(false)}
-            className="text-base font-semibold text-slate-300 py-2 border-b border-slate-800/50"
+            className={`text-base font-semibold py-2 border-b border-slate-800/50 ${
+              isActive("/about") ? "text-amber-500" : "text-slate-300"
+            }`}
           >
             About
-          </a>
+          </Link>
           <a 
             href="/#services" 
             onClick={() => setIsOpen(false)}
