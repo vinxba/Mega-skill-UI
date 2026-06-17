@@ -18,7 +18,11 @@ export default function Services() {
                 key={service.id}
                 className="bg-white shadow-lg"
               >
-                <div className="h-52 bg-slate-200"></div>
+                <img 
+                  src={service.image} 
+                  alt={service.title} 
+                  className="h-52 w-full object-cover"
+                />
 
                 <div className="p-6">
                   <Icon className="text-[#F5B400] mb-4" />

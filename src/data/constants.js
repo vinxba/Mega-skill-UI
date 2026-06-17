@@ -1,3 +1,9 @@
+import hvacImage from "../assets/HVAC.jpg";
+import plumbingImage from "../assets/Plumbing.jpg";
+import electricalImage from "../assets/Electrical.jpg";
+import tileImage from "../assets/tiles.jpg";
+import carpentryImage from "../assets/carpentry.jpg";
+import paintingImage from "../assets/painting.jpg";
 import {
   Snowflake,
   Wrench,
@@ -16,8 +22,7 @@ export const services = [
     description:
       "Air Conditioning, Ventilation & Air Filtration Systems Installation & Maintenance",
     icon: Snowflake,
-    image:
-      "https://images.unsplash.com/photo-1581092919535-7146ff1a5908",
+    image: hvacImage,
   },
   {
     id: 2,
@@ -25,8 +30,7 @@ export const services = [
     description:
       "Sanitary Installation & Pipe Repairing for residential and commercial properties",
     icon: Wrench,
-    image:
-      "https://images.unsplash.com/photo-1621905252507-b35492cc74b4",
+    image: plumbingImage,
   },
   {
     id: 3,
@@ -43,8 +47,8 @@ export const services = [
     description:
       "Electromechanical Equipment Installation & Maintenance",
     icon: Settings,
-    image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
+    image: electricalImage,
+      
   },
   {
     id: 5,
@@ -52,8 +56,8 @@ export const services = [
     description:
       "Professional Interior & Exterior Painting Services",
     icon: Paintbrush,
-    image:
-      "https://images.unsplash.com/photo-1562259949-e8e7689d7828",
+    image:paintingImage,
+     
   },
   {
     id: 6,
@@ -70,8 +74,8 @@ export const services = [
     description:
       "Professional Floor & Wall Tiling and Plaster Works",
     icon: Grid,
-    image:
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
+    image:tileImage,
+      
   },
   {
     id: 8,
@@ -79,8 +83,8 @@ export const services = [
     description:
       "Premium Carpentry and Wood Flooring Services",
     icon: Hammer,
-    image:
-      "https://images.unsplash.com/photo-1517048676732-d65bc937f952",
+    image:carpentryImage,
+      
   },
 ];
 
