@@ -5,6 +5,8 @@ import Hero from './components/Hero';
 import Services from "./components/Services";
 import Statistics from "./components/Statistics";
 import WorkProcess from "./components/WorkProcess";
+import Testimonials from "./components/Testimonials";
+
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
@@ -14,6 +16,7 @@ export default function App() {
        <Statistics />
       <Services />
       <WorkProcess />
+      <Testimonials />
       <Footer />
     </div>
   );
