@@ -10,7 +10,9 @@ export default function Navbar() {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <header className="sticky top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+    <header className={`sticky top-0 left-0 w-full z-50 border-b border-slate-800 ${
+      isOpen ? "bg-slate-950" : "bg-slate-900/80 backdrop-blur-md"
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           
@@ -82,7 +84,7 @@ export default function Navbar() {
 
       {/* Mobile Sidebar Menu */}
       <div 
-        className={`lg:hidden fixed top-0 left-0 h-full w-72 bg-slate-900 border-r border-slate-800 px-6 py-8 z-50 transition-transform duration-300 ease-in-out transform ${
+        className={`lg:hidden fixed top-0 left-0 h-full w-72 bg-slate-950 border-r border-slate-800 px-6 py-8 z-50 transition-transform duration-300 ease-in-out transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
