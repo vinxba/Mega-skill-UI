@@ -36,7 +36,7 @@ export default function Home() {
       </motion.div>
 
       <a
-        href="https://wa.me/6282744675"
+        href="https://wa.me/971569573155"
         target="_blank"
         rel="noreferrer"
         aria-label="Chat on WhatsApp"

@@ -21,7 +21,7 @@ export default function ContactPage() {
     const message = `*New Inquiry from Megaskill Contact Form*%0A%0A*Name:* ${encodeURIComponent(formData.fullName)}%0A*Email:* ${encodeURIComponent(formData.emailAddress)}%0A*Phone:* ${encodeURIComponent(formData.phoneNumber)}%0A*Service:* ${encodeURIComponent(formData.serviceRequired || 'Not specified')}%0A*Message:* ${encodeURIComponent(formData.message)}`;
     
     // Open WhatsApp with the pre-filled message
-    const whatsappURL = `https://wa.me/6282744675?text=${message}`;
+    const whatsappURL = `https://wa.me/971569573155?text=${message}`;
     window.open(whatsappURL, '_blank');
     
     // Reset form
@@ -166,12 +166,12 @@ export default function ContactPage() {
                 <div>
                   <p className="text-xs text-gray-400 font-medium">WhatsApp</p>
                   <a
-                    href="https://wa.me/6282744675"
+                    href="https://wa.me/971569573155"
                     target="_blank"
                     rel="noreferrer"
                     className="text-sm font-bold text-gray-800 mt-0.5 block"
                   >
-                    +971 4 628 274 4675
+                    +971 56 957 3155
                   </a>
                   <p className="text-xs text-gray-500 mt-0.5">Chat with us on WhatsApp</p>
                 </div>
@@ -187,8 +187,9 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="text-xs text-gray-400 font-medium">Our Location</p>
-                  <p className="text-sm font-bold text-gray-800 mt-0.5 leading-relaxed">
-                    Office 402, Business Bay Tower,<br />
+                  <p className="text-sm font-bold text-gray-800 mt-0.5 leading-relaxed uppercase">
+                    MEGA SKILL TECHNICAL SERVICES L.L.C<br />
+                    HORIZONE BUILDING - Office No: 602-14<br />
                     Dubai, United Arab Emirates
                   </p>
                 </div>
