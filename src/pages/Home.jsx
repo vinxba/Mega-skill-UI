@@ -1,3 +1,5 @@
+import React from 'react';
+import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Statistics from '../components/Statistics';
@@ -6,14 +8,32 @@ import WorkProcess from '../components/WorkProcess';
 import Testimonials from '../components/Testimonials';
 import Footer from '../components/Footer';
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.7, ease: "easeOut" } 
+  }
+};
+
 export default function Home() {
   return (
     <div className="relative">
       <Hero />
-      <Statistics />
-      <Services />
-      <WorkProcess />
-      <Testimonials />
+      
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}>
+        <Statistics />
+      </motion.div>
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}>
+        <Services />
+      </motion.div>
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}>
+        <WorkProcess />
+      </motion.div>
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}>
+        <Testimonials />
+      </motion.div>
 
       <a
         href="https://wa.me/6282744675"
