@@ -31,9 +31,12 @@ export default function Hero() {
               OUR SERVICES
             </button>
 
-            <button className="border border-white px-8 py-4">
+            <a
+              href="/contact"
+              className="border border-white px-8 py-4 text-white inline-flex items-center justify-center"
+            >
               CONTACT US
-            </button>
+            </a>
           </div>
         </div>
       </div>
