@@ -13,11 +13,11 @@ const columns = [
   {
     heading: "Our Services",
     links: [ // These links would typically point to sections on a services page or individual service pages
-      { name: "HVAC Systems", path: "/services#hvac" },
-      { name: "Plumbing Services", path: "/services#plumbing" },
-      { name: "Electrical Services", path: "/services#electrical" },
-      { name: "Painting Works", path: "/services#painting" },
-      { name: "Carpentry", path: "/services#carpentry" },
+      { name: "HVAC Systems", path: "/#services" },
+      { name: "Plumbing Services", path: "/#services" },
+      { name: "Electrical Services", path: "/#services" },
+      { name: "Painting Works", path: "/#services" },
+      { name: "Carpentry", path: "/#services" },
     ],
   },
 ];
