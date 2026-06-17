@@ -10,7 +10,7 @@ export default function Statistics() {
           </div>
 
           <div className="p-10">
-            <h3 className="text-4xl font-bold">500+</h3>
+            <h3 className="text-4xl font-bold">100+</h3>
             <p>Projects Completed</p>
           </div>
 
