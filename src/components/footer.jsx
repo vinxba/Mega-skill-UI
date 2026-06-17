@@ -5,8 +5,7 @@ const columns = [
   {
     heading: "Company",
     links: [
-      { name: "About Us", path: "/about" },
-      { name: "Careers", path: "#" }, // Placeholder, adjust if you create a careers page
+      { name: "About Us", path: "/about" }, //if you create a careers page
       { name: "Contact Us", path: "/contact" },
       { name: "Blog", path: "#" }, // Placeholder, adjust if you create a blog page
     ],
