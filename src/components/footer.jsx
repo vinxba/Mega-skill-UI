@@ -16,6 +16,7 @@ const columns = [
       { name: "HVAC Systems", path: "/#services" },
       { name: "Plumbing Services", path: "/#services" },
       { name: "Electrical Services", path: "/#services" },
+          { name: "Mechanical Maintenance", path: "/#services" },
       { name: "Painting Works", path: "/#services" },
       { name: "Carpentry", path: "/#services" },
     ],
@@ -23,6 +24,15 @@ const columns = [
 ];
 
 export default function Footer() {
+  const scrollToId = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      // fallback to navigating to the anchor which may trigger route change
+      window.location.href = `/#${id}`;
+    }
+  };
   return (
     <footer className="bg-gray-950 text-gray-400">
       {/* Back to top */}
@@ -41,11 +51,22 @@ export default function Footer() {
             <ul className="space-y-3">
               {col.links.map(linkItem => (
                 <li key={linkItem.name}>
-                  {/* Use Link for internal navigation, a for external or placeholders */}
-                  {linkItem.path.startsWith('/') || linkItem.path.startsWith('#') ? (
-                    <Link to={linkItem.path} className="text-sm hover:text-white transition-colors">{linkItem.name}</Link>
+                  {/* Smooth-scroll to services when link targets the services anchor */}
+                  {linkItem.path && linkItem.path.includes('#services') ? (
+                    <a
+                      href="#services"
+                      onClick={(e) => { e.preventDefault(); scrollToId('services'); }}
+                      className="text-sm hover:text-white transition-colors"
+                    >
+                      {linkItem.name}
+                    </a>
                   ) : (
-                    <a href={linkItem.path} className="text-sm hover:text-white transition-colors">{linkItem.name}</a>
+                    /* Use Link for internal navigation, a for external or placeholders */
+                    (linkItem.path && (linkItem.path.startsWith('/') || linkItem.path.startsWith('#'))) ? (
+                      <Link to={linkItem.path} className="text-sm hover:text-white transition-colors">{linkItem.name}</Link>
+                    ) : (
+                      <a href={linkItem.path} className="text-sm hover:text-white transition-colors">{linkItem.name}</a>
+                    )
                   )}
                 </li>
               ))}

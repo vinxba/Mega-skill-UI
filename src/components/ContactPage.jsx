@@ -189,8 +189,11 @@ export default function ContactPage() {
                   <p className="text-xs text-gray-400 font-medium">Our Location</p>
                   <p className="text-sm font-bold text-gray-800 mt-0.5 leading-relaxed uppercase">
                     MEGA SKILL TECHNICAL SERVICES L.L.C<br />
-                    HORIZONE BUILDING - Office No: 602-14<br />
-                    Dubai, United Arab Emirates
+                    TANVI HUB BUSINESS CENTER<br />
+                    HORIZONE BUILDING -<br />
+                    OFFICE NO: 301-42<br />
+                    PORT SAEED<br />
+                    Dubai, UAE
                   </p>
                 </div>
               </div>

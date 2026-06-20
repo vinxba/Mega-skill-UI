@@ -4,6 +4,7 @@ import electricalImage from "../assets/Electrical.jpg";
 import tileImage from "../assets/tiles.jpg";
 import carpentryImage from "../assets/carpentry.jpg";
 import paintingImage from "../assets/painting.jpg";
+import MechaicalMaintenanceImage from "../assets/MechanicalMaintenance.jpg";
 import {
   Snowflake,
   Wrench,
@@ -85,6 +86,14 @@ export const services = [
     icon: Hammer,
     image:carpentryImage,
       
+  },
+  {
+    id: 9,
+    title: "Mechanical Maintenance",
+    description:
+      "Mechanical Systems Installation & Preventive Maintenance",
+    icon: Settings,
+    image: MechaicalMaintenanceImage,
   },
 ];
 

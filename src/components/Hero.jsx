@@ -40,8 +40,8 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mt-6 text-lg md:text-xl text-gray-300"
           >
-            HVAC • Plumbing • Electrical • Interior Fit-Out •
-            Facility Maintenance
+            Mechanical Maintenance • HVAC • Plumbing • Electrical • Interior Fit-Out •
+            Facility Maintenance 
           </motion.p>
 
           <motion.div 
